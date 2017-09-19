@@ -20,10 +20,7 @@
 
 namespace __sanitizer {
 
-  struct MemoryMappingLayoutData;
-  struct ProcSelfMapsBuff;
-// Reads process memory map in an OS-specific way.
-void ReadProcMaps(ProcSelfMapsBuff *proc_maps);
+struct MemoryMappingLayoutData;
 
 // Memory protection masks.
 static const uptr kProtectionRead = 1;
