@@ -78,14 +78,6 @@ class MemoryMappingLayout {
 
   // FIXME: Hide implementation details for different platforms in
   // platform-specific files.
-# if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
-  ProcSelfMapsBuff proc_self_maps_;
-  const char *current_;
-
-  // Static mappings cache.
-  static ProcSelfMapsBuff cached_proc_self_maps_;
-  static StaticSpinMutex cache_lock_;  // protects cached_proc_self_maps_.
-# endif
   MemoryMappingLayoutData *data_;
 };
 

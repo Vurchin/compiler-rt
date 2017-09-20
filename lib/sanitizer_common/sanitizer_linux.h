@@ -28,7 +28,21 @@ namespace __sanitizer {
 // the one in <dirent.h>, which is used by readdir().
 struct linux_dirent;
 
+<<<<<<< HEAD
 struct ProcSelfMapsBuff;
+=======
+struct ProcSelfMapsBuff {
+    char *data;
+    uptr mmaped_size;
+    uptr len;
+  };
+struct MemoryMappingLayoutData {
+  ProcSelfMapsBuff proc_self_maps;
+  const char *current;
+};
+
+
+>>>>>>> 169007b9587e002f2f16c5ae1c9518a1db17c3ca
 void ReadProcMaps(ProcSelfMapsBuff *proc_maps);
 
 // Syscall wrappers.
